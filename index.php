@@ -15,7 +15,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <h1>Financial System</h1>
+            <h1 class="display-4">Financial System</h1>
             <?php
             // Inisialisasi saldo awal
             $balance = 0;
@@ -53,13 +53,15 @@
 
             <h2>Transactions</h2>
             <div class="table-responsive">
-                <table class="table">
-                    <table border="1">
+                <table class="table table-striped table-hover">
+                    <thead class="table-dark">
                         <tr>
                             <th>Date & Time</th>
                             <th>Type</th>
                             <th>Amount</th>
                         </tr>
+                    </thead>
+                    <tbody>
                         <?php
                         // Menampilkan semua transaksi dari file CSV
                         if (($file = fopen("transactions.csv", "r")) !== FALSE) {
@@ -73,11 +75,15 @@
                             fclose($file);
                         }
                         ?>
-                    </table>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xxxx" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-yyyy" crossorigin="anonymous"></script>
 </body>
 
 </html>
