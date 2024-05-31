@@ -50,9 +50,10 @@
                 <input type="submit" value="Add Transaction">
             </form>
             <br>
+
+            <h2>Transactions</h2>
             <div class="table-responsive">
                 <table class="table">
-                    <h2>Transactions</h2>
                     <table border="1">
                         <tr>
                             <th>Date & Time</th>
@@ -66,7 +67,7 @@
                                 echo "<tr>";
                                 echo "<td>" . htmlspecialchars($data[0]) . "</td>";
                                 echo "<td>" . htmlspecialchars($data[2]) . "</td>";
-                                echo "<td>" . htmlspecialchars(number_format($data[1], 2)) . "</td>";
+                                echo "<td>" . htmlspecialchars(number_format($data[1])) . "</td>";
                                 echo "</tr>";
                             }
                             fclose($file);
