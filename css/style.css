@@ -4,7 +4,7 @@ body {
 }
 
 h1, h2 {
-    color: #333;
+    color: #db5314;
 }
 
 form {
@@ -16,7 +16,7 @@ label {
     width: 100px;
 }
 
-input[type="text"], input[type="date"], input[type="number"] {
+input[type="text"], input[type="number"], select {
     width: 200px;
     padding: 5px;
     margin-bottom: 10px;
@@ -36,4 +36,17 @@ table, th, td {
     border: 1px solid black;
     padding: 10px;
     text-align: left;
+}
+
+th {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #000;
 }

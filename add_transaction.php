@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $amount = $_POST['amount'];
     
     $file = fopen('transactions.csv', 'a');
-    fputcsv($file, array($date_time, $amount, $type));
+    fputcsv($file, array($type, $amount, $date_time));
     fclose($file);
     
     header("Location: index.php");
